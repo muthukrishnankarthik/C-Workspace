@@ -1,0 +1,392 @@
+﻿Ex 1:
+
+#include<stdio.h>
+
+int main()
+{
+printf("One half is 50%%\n");
+int a,b;
+printf("Enter two integers\n");
+scanf("%d%d",&a,&b);
+
+printf("The difference between %d and %d is %d \n\n",a,b,a-b);
+
+printf("Enter two floating numbers for division\n");
+
+float x,y;
+scanf("%f%f",&x,&y);
+
+printf("%f / %f is %f\n",x,y,x/y);
+
+return 0;
+
+}
+
+
+Ex 2:
+
+
+#include<stdio.h>
+int main()
+{
+int a,b;
+printf("Enter two integers\n");
+scanf("%d%d",&a,&b);
+
+printf("You entered %d and %d and their sum is %d\n\n",a,b,a+b);
+float x,y;
+printf("Enter two  floating numbers\n");
+scanf("%f%f",&x,&y);
+printf("You entered %f and %f and their product is %f\n\n",x,y,x*y);
+char str[30];
+printf("Give a word\n");
+scanf("%s",str);
+printf("%s %s",str,str);
+
+return 0;
+}
+
+
+Ex 3:
+
+#include<stdio.h>
+int main()
+{
+
+int a;
+printf("Give an integer\n");
+scanf("%d",&a);
+if(a==0)
+printf("The number you entered is equal to 0\n");
+else
+printf("The number you entered is not equal to 0\n");
+printf("\n Enter two floating numbers \n");
+float x,y,z;
+scanf("%f%f",&x,&y);
+//if(x>y)
+//z=x;
+//else
+z=x>y?x:y;
+printf("The largest of the numbers is %f\n",z);
+int j;
+printf("\nEnter an integer");
+scanf("%d",&j);
+if(j%2==0)
+printf("\nResult is:%d", j/2);
+else
+printf("\n Result is : %d",j*3);
+
+void compare()
+{
+int a,b,c,d;
+
+printf("\nEnter three integers\n");
+scanf("%d%d%d",&b,&c,&d);
+
+if(a==b|b==c|a==c)
+    {
+      printf("some numbers are equal");
+
+    }
+    else
+    {
+      printf("all are unique");
+    }
+
+
+}
+compare();
+
+return 0;
+}
+
+
+Ex 4:
+
+#include <stdio.h>
+
+int sequence()
+{
+int a;
+    do
+    {
+        printf("give a number:  \n");
+        scanf("%d",&a);
+
+        
+if(a==0)
+        {
+          printf("you entered zero ");
+          getch();break;
+        }
+            b=a*a;
+            printf("the square of %d is %d\n ",a,b);
+    }while(a!=0);
+}
+
+int main() {
+    int a,b;
+    printf("Even numbers between 1 to 40\n");
+
+    for(a = 0; a <= 40; a++)
+    {
+
+        if(a%2==0)
+        {
+            printf("%d ",a);
+        }
+    }
+
+    
+    
+    printf("numbers 1 to 100 \n");
+
+    for(a=0;a<=100;a++)
+    {
+      printf("%d  ",a);
+        if(a%10==0)
+            printf("\n");
+    }
+
+
+    sequence(a,b);
+    return 0;
+
+}
+
+
+Ex 5:
+
+#include<stdio.h>
+
+int printno()
+{ int i,n;
+
+     printf("give a number: ");
+     scanf("%d",&n);
+
+       for(i=1;i<=n;i++)
+         {
+           printf("%d \n",i);
+         }
+}
+
+
+int main()
+{
+    int n,i,y;
+char x;
+do{
+  printno();
+
+  printf("run again ? \n 1.yes(y) \n 2.no(n) \n ");
+  scanf("%c",&x);
+	}while(x==’y’);
+printf(“Exiting..”);
+getch();
+
+
+  return 0;
+
+}
+
+
+Ex 6:
+
+#include <stdio.h>
+
+float minval(float a,float b,float c,float d)
+{
+   if(a<b&&a<c&&a<d)
+    {
+     printf("min value:: %f \n",a);
+    }
+     else if(b<a&&b<c&&b<d)
+     {
+      printf("min value:: %f \n",b);
+     }
+     else if(c<a&&c<b&&c<d)
+     {
+      printf("min value:: %f \n",c);
+     }
+    else
+    {
+     printf("min value:: %f \n",d);
+    }
+}
+
+float maxval(float a,float b,float c,float d)
+{
+   if(a>b&&a>c&&a>d)
+    {
+     printf("max value:: %f \n",a);
+    }
+     else if(b>a&&b>c&&b>d)
+     {
+      printf("max value:: %f \n",b);
+     }
+     else if(c>a&&c>b&&c>d)
+     {
+      printf("max value:: %f \n",c);
+     }
+    else
+    {
+     printf("max value:: %f \n",d);
+    }
+}
+
+float sumval(float a,float b,float c,float d,float e)
+{
+   e = a+b+c+d;
+   printf("sum      :: %f\n",e);
+}
+
+float meanval(float a,float b,float c,float d,float e)
+{
+   e = (a+b+c+d)/4;
+   printf("mean     :: %f\n",e);
+}
+
+
+int main()
+{
+    float a,b,c,d,e;
+    printf("Enter four VALUES :: \n");
+    scanf("%f%f%f%f",&a,&b,&c,&d);
+
+    minval(a,b,c,d);
+    maxval(a,b,c,d);
+    sumval(a,b,c,d,e);
+    meanval(a,b,c,d,e);
+
+    return 0;
+
+}
+
+
+Ex 7:
+
+#include <stdio.h>
+
+void add(int a,int b)
+{
+  
+   printf("%d + %d =%d \n",a,b,a+b);
+}
+
+void sub(int a,int b)
+{
+  
+   printf("%d - %d =%d \n",a,b,a-b);
+}
+
+void mult(int a,int b)
+{
+   c = a*b;
+   printf("%d * %d =%d \n",a,b,a*b);
+}
+
+void div(int a,int b)
+{
+   c = a/b;
+   printf("%d / %d =%d \n",a,b,a/b);
+}
+
+int main()
+{
+    int a,b;
+    printf("Enter two numbers\n");
+    scanf("%d %d",&a,&b);
+   
+    add(a,b);
+    sub(a,b);
+    mult(a,b);
+    div(a,b);
+
+    return 0;
+
+}
+
+
+Ex 8:
+
+#include <stdio.h>
+
+void intval()
+{
+    int a[30],n;
+  do{
+    printf("Enter the number of values to be filled\n");
+    scanf("%d",&n);
+}while(n==0);
+
+printf("input numbers:\n");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+}
+printf("Initial Values: {");
+
+for(int i=0;i<n;i++)
+{
+    printf("%d",a[i]);
+    if(i==n-1)
+        printf("}\n");
+    else
+        printf(",");
+
+}
+int ctr=0;
+for(int i=0;i<n;i++)
+if(a[i]==0)ctr++;
+
+printf("Number of zeros: %d\n",ctr);
+printf("Tripled value:{");
+
+for(int i=0;i<n;i++)
+{
+    printf("%d",a[i]*3);
+    if(i==n-1)
+        printf("}");
+    else
+        printf(",");
+
+
+}}
+
+int main()
+{
+    intval();
+    return 0;
+
+}
+
+
+Ex 9:
+#include<stdio.h>
+int fibbo(int n,int a,int b,int c)
+{
+if(n==0)
+	getch();
+else
+{
+printf("%d",a);
+c=a+b;
+a=b;b=c;
+fibbo(n-1,a,b,c);
+}
+}
+
+int main()
+{
+int n,a=1,b=1,c=0;
+scanf("%d",&n);
+fibbo(n,a,b,c);
+
+return 0;
+}
+
+
+
+
+
